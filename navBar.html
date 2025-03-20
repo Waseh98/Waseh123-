@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Mega Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: black;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            position: relative;
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: 0.3s;
+        }
+        .navbar ul li a:hover {
+            background-color: green;
+            border-radius: 5px;
+        }
+        .mega-menu {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: black;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+        }
+        .mega-menu a {
+            padding: 10px;
+            color: white;
+            transition: 0.3s;
+        }
+        .mega-menu a:hover {
+            background-color: green;
+        }
+        .courses:hover .mega-menu {
+            display: flex;
+        }
+        .sub-menu {
+            position: absolute;
+            left: 200px;
+            top: 0;
+            background: black;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+        }
+        .sub-menu a {
+            padding: 10px;
+            color: white;
+            transition: 0.3s;
+        }
+        .sub-menu a:hover {
+            background-color: green;
+        }
+        .web-dev:hover .sub-menu {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="courses">
+                <a href="#">Courses</a>
+                <div class="mega-menu">
+                    <div class="web-dev">
+                        <a href="#">Web Development</a>
+                        <div class="sub-menu">
+                            <a href="#">HTML</a>
+                            <a href="#">CSS</a>
+                            <a href="#">JavaScript</a>
+                        </div>
+                    </div>
+                    <a href="#">WordPress Development</a>
+                    <a href="#">Digital Marketing</a>
+                    <a href="#">FB Ads</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

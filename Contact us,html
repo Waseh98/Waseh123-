@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="navBar.css">
+  <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Enter the subject" required>
+            
+            <label for="service">Select Service</label>
+            <select id="service" required>
+                <option value="">Choose a service</option>
+                <option value="web_design">Web Design</option>
+                <option value="seo">SEO Optimization</option>
+                <option value="marketing">Digital Marketing</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Enter your message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
